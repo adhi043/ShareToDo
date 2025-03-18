@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { use, useCallback, useState } from 'react';
 import { StyleSheet, View, Text, Image, useColorScheme, Animated } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import Splash from '../Components/Splash';
@@ -29,6 +29,10 @@ const slides = [
 ];
 
 
+
+
+
+
 const Slider = ({ navigation }) => {
   const [showSplash, setShowSplash] = useState(true);
   const systemTheme = useColorScheme();
@@ -38,6 +42,8 @@ const Slider = ({ navigation }) => {
   if (showSplash) {
     return <Splash onAnimationEnd={() => setShowSplash(false)} />;
   }
+
+ 
 
   const renderItem = ({ item }) => {
     Animated.timing(fadeAnim, {

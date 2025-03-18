@@ -75,6 +75,3 @@ export const Color = {
 
 
 
-export const socketbaseUrl = 'http://5.78.112.149:8001/pixobuy' 
-export const baseUrl='http://192.168.194.50:8000/pixobuy'        
-export const googleKey = 'AIzaSyA0ezzOFq6lTHs4i4DlmMPJpV48LAWMx7o'

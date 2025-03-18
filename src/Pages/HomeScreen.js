@@ -21,6 +21,10 @@ const HomeScreen = ({ navigation }) => {
   const opacityAnim = new Animated.Value(0); // Animation for theme switch
   const scaleAnim = new Animated.Value(1); // Animation for category selection
 
+
+
+
+
   useFocusEffect(
     React.useCallback(() => {
       loadTasks(); // Load tasks every time the screen is focused
@@ -116,11 +120,11 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <Animated.View 
+    <View 
       style={[
         styles.container, 
         isDark ? styles.darkContainer : styles.lightContainer, 
-        { opacity: opacityAnim }
+        
       ]}
     >
       <Text style={[styles.header, isDark && styles.darkText]}>Share To-Do</Text>
@@ -174,7 +178,7 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate("AddTask")}>
         <PlusIcon size={28} color="white" />
       </TouchableOpacity>
-    </Animated.View>
+    </View>
   );
 };
 
